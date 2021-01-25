@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geolocation</title>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <!--
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js" crossorigin="anonymous"></script>
+
+        -->
+</head>
+
+<body>
+
+    <form>
+        <input type="button" id="searchBtn" disabled="true" value="Buscar posicion" onclick="findPosition()" />
+    </form>
+
+    <div id="msgBox"></div>
+
+    <a id = "map-link" target="_blank"></a>
+    <div id="map">
+
+    </div>
+
+    <iframe id="mapframe" 
+        height="400" width="300" 
+        border="0" marginwidth="0" marginheight="0" 
+        src="">
+    </iframe>
+
+    <div id="tableDiv" sytle="display:none">
+        <table id="locationsTable" border="1">
+            <tr>
+                <th>Date</th><th>Lat</th><th>Long</th><th>Heading</th><th>Speed</th>
+            </tr>
+        </table>
+    </div>
+</body>
+<script>
+    $(document).ready(function () {
+        console.log("Document ready");
+        $("#searchBtn").removeAttr("disabled");
+    });
+
+    let watchHandlerId;
+
+    let allowLoadMap = true;
+    setInterval(function () { allowLoadMap = true;}, 10000);
+
+    function findPosition() {
+
+        if (!navigator.geolocation) {
+            $("#msgBox").text('Geolocation is not supported by your browser');
+        } else {
+            $("#msgBox").text('Locating…');
+
+            // Mostrar la tabla de posiciones
+            $("#tableDiv").css("display", "block");
+            navigator.geolocation.getCurrentPosition(success, error);
+
+            watchHandlerId = navigator.geolocation.watchPosition(success, error);
+        }
+    }
+
+    function success(position) {
+        console.log(position);
+
+        /*
+        position.timestamp
+        position.coords.accuracy
+        position.coords.altitude
+        position.coords.altitudeAccuracy
+        position.coords.heading
+        position.coords.latitude
+        position.coords.longitude
+        position.coords.speed
+        */
+
+        const latitude = position.coords.latitude;
+        const longitude = position.coords.longitude;
+        const date = new Date(position.timestamp);
+
+        let url = `https://www.openstreetmap.org/#map=18/${latitude}/${longitude}`;
+        //let url = `https://www.mapquest.com/embed?center=${latitude},${longitude}&zoom=16&maptype=map`
+        $("#msgBox").text(url);
+        if (allowLoadMap) {
+            console.log("Cargando mapa");
+            $("#mapframe").attr("src", url);
+            allowLoadMap = false;
+        }
+
+        const table = $("#locationsTable");
+        const tr = $("<tr></tr>");
+        const dateTd = $("<td></td>");
+        dateTd.append(date.toISOString());
+        const latTd = $("<td></td>");
+        latTd.append(latitude);
+        const longTd = $("<td></td>");
+        longTd.append(longitude);
+        const headingTd = $("<td></td>");
+        headingTd.append(position.coords.heading);
+        const speedTd = $("<td></td>");
+        speedTd.append(position.coords.speed);
+        tr.append(dateTd);
+        tr.append(latTd);
+        tr.append(longTd);
+        tr.append(headingTd);
+        tr.append(speedTd);
+        table.append(tr);
+    }
+
+    function error(geolocationError) {
+        let msg = "No se puede obtener tu localizacion";
+
+        if (geolocationError && geolocationError.code && geolocationError.code == 1) {
+            // Error 1 : el usuario ha denegado el permiso de localizacion
+            // geoLocationError.message es User denied geolocation
+            msg = "Localizacion denegada por el usuario";
+        }
+
+        $("#msgBox").text(msg);
+    }
+</script>
+
+</html>
