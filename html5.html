@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        aside {
+            width: 30%;
+            padding-left: 15px;
+            margin-left: 15px;
+            float: right;
+            font-style: italic;
+            background-color: lightgray;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        Navigation bar |
+        <a href="/learn-html.html">HTML</a> |
+        <a href="/learn-css.html">CSS</a> |
+        <a href="/learn-javascript.html">JavaScript</a> |
+        <a href="/learn-php.html">PHP</a> |
+    </nav>
+
+    <main>
+
+        <h1>Titulo H1 tiene este tamaño</h1>
+        <h2>Titulo H2 tiene este tamaño</h2>
+        <h3>Titulo H3 tiene este tamaño</h3>
+        <h4>Titulo H4 tiene este tamaño</h4>
+        <h5>Titulo H5 tiene este tamaño</h5>
+        <h6>Titulo H6 tiene este tamaño</h6>
+
+        <p>Parrafo Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sit amet nisl id orci maximus posuere
+            hendrerit sit amet lorem. Phasellus est diam, rutrum vel venenatis ac, blandit vitae enim. Mauris tempor at
+            risus imperdiet dapibus. Proin vulputate tortor in odio euismod posuere. Duis congue lacinia lorem a
+            placerat.
+            Aliquam congue est non ligula fermentum, non imperdiet dolor fermentum. Phasellus interdum magna vel nibh
+            venenatis, </p>
+
+        <hr />
+
+        <pre>
+        <code>
+            First line of program code
+            Second line of program code
+        </code>    
+    </pre>
+        <hr />
+
+        <p title="Esto es un tooltip">Parrafo con un tooltip</p>
+
+        <p>Texto<sup>Superindice</sup> Texto<sub>Subindice</sub> <b>bold</b> <i>italica</i>
+            <u>subrrayado</u> <s>strike</s> <big>Texto big</big>
+            <strong>texto importante con strong</strong>
+            <em>
+                texto enfatizado con em
+            </em>
+            <mark>texto resaltado con mark</mark>
+            <small>letra pequeña con small</small>
+            <insert>texto añadido con insert</insert>
+            <del>texto eliminado con del</del>
+        </p>
+
+        <pre>Pre hace
+        que los saltos
+                 de línea
+se respeten</pre>
+
+        <p>Usar blockquote para citas con textos largos:</p>
+        <blockquote>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sit amet nisl id orci maximus posuere
+            hendrerit sit amet lorem. Phasellus est diam, rutrum vel venenatis ac, blandit vitae enim. Mauris tempor at
+            risus imperdiet dapibus. Proin vulputate tortor in odio euismod posuere. Duis congue lacinia lorem a
+            placerat.
+            Aliquam congue est non ligula fermentum, non imperdiet dolor fermentum. Phasellus interdum magna vel nibh
+            venenatis, quis luctus libero tempor. </blockquote>
+        <p>Usar q para citas con textos cortos: <q>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</q></p>
+
+        <p>Usar abbr para describir abreviaciones como <abbr title="World Health Organization">WHO</abbr></p>
+
+        <p>Usar address para informacion de contacto:</p>
+        <address>
+            Written by John Doe.<br>
+            Visit us at:<br>
+            Example.com<br>
+            Box 564, Disneyland<br>
+            USA
+        </address>
+
+        <hr />
+
+        <p>Usar details para tener un bloque de información oculta. Con el atributo open el texto
+            oculto está mostrado al cargar el documento.
+        </p>
+        <details>
+            <summary>Resumen de lo oculto. Click to see details</summary>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sit amet nisl id orci maximus posuere
+                hendrerit sit amet lorem. Phasellus est diam, rutrum vel venenatis ac, blandit vitae enim. Mauris tempor
+                at
+                risus imperdiet dapibus. Proin vulputate tortor in odio euismod posuere. Duis congue lacinia lorem a
+                placerat.
+                Aliquam congue est non ligula fermentum, non imperdiet dolor fermentum. Phasellus interdum magna vel
+                nibh
+                venenatis, quis luctus libero tempor.</p>
+        </details>
+
+        <hr />
+
+        <p>Usar cite para mencionar titulos de obras como <cite>El Quijote</cite> o <cite>Las Meninas</cite>.</p>
+
+        <p>Usar bdo con atributo dir rtl o ltr para escribir de derecha a izquierda o de izquierda a derecha:</p>
+        <bdo dir="rtl">Direccion del texto</bdo> <bdo dir="ltr">Dirección del texto</bdo>
+
+        <p>Usar img, map y area para hacer imagenes con areas clicables rectangulares y circulares.</p>
+
+        <p>Tabla con caption. Con css caption-side: bottom se puede poner el caption debajo de la tabla.</p>
+        <table border="1">
+            <caption>Telefonos importantes</caption>
+            <tr>
+                <th>Name</th>
+                <th>Telephone</th>
+                <th>Fax</th>
+            </tr>
+            <tr>
+                <td>Bill Gates</td>
+                <td>55577854</td>
+                <td>55577855</td>
+            </tr>
+            <tr>
+                <td>Steve Jobs</td>
+                <td>111111111</td>
+                <td rowspan="2">rs345567</td>
+            </tr>
+            <tr>
+                <td>James Gostling</td>
+                <td>33333333</td>
+            </tr>
+            <td>Linus Torvalds</td>
+            <td colspan="2">534534543</td>
+        </table>
+
+        <ul>
+            <li>Coffee</li>
+            <li>Tea</li>
+            <li>Milk</li>
+        </ul>
+
+        <ol>
+            <li>Coffee</li>
+            <li>Tea</li>
+            <li>Milk</li>
+        </ol>
+
+        <dl>
+            <dt>Coffee</dt>
+            <dd>- black hot drink</dd>
+            <dt>Milk</dt>
+            <dd>- white cold drink</dd>
+        </dl>
+
+        <p>Hay dos tipos de display: block e inline. Div es block, y span es inline</p>
+
+        <p>Input types:</p>
+
+        <form>
+            <label>Button</label> <input type="button" value="Boton"><br />
+            <label>Checkbox</label> <input type="checkbox"><br />
+            <label>Color</label> <input type="color"><br />
+            <label>Date con min y max</label> <input type="date"><br />
+            <label>Date time local</label> <input type="datetime-local"><br />
+            <label>Email</label> <input type="email"><br />
+            <label>File</label> <input type="file"><br />
+            <label>Multiple files</label> <input type="file" multiple /><br />
+            <label>Hidden</label> <input type="hidden"><br />
+            <label>Image</label> <input type="image"><br />
+            <label>Month</label> <input type="month"><br />
+            <label>Integer con min max step</label> <input type="number" min="0" max="100" step="5"><br />
+            <label>Password</label> <input type="password"><br />
+            <label>Radio</label> <input type="radio"><br />
+            <label>Range (slider) con min, max, step</label> <input type="range" min="0" max="100" step="5"><br />
+            <label>Reset</label> <input type="reset"><br />
+            <label>Search</label> <input type="search"><br />
+            <label>Submit</label> <input type="submit"><br />
+            <label>Telefono con pattern</label> <input type="tel"><br />
+            <label>Text con placeholder</label> <input type="text" placeholder="Su texto aqui" /><br />
+            <label>Time</label> <input type="time"><br />
+            <label>Url</label> <input type="url"><br />
+            <label>Week</label> <input type="week"><br />
+
+            <label>Text with regex pattern y tooltip</label>
+            <input type="text" id="country_code" name="country_code" pattern="[A-Za-z]{3}"
+                title="Three letter country code"><br />
+            <label>Text with required attribute</label>
+            <input type="text" id="username" name="username" required><br />
+
+            <label>Datalist</label>
+            <input list="browsers">
+            <datalist id="browsers">
+                <option value="Internet Explorer">
+                <option value="Firefox">
+                <option value="Chrome">
+                <option value="Opera">
+                <option value="Safari">
+            </datalist>
+
+            <fieldset>
+                <legend>Fieldset con legend</legend>
+
+                <label for="cars">Select:</label>
+                <select name="cars" id="cars">
+                    <optgroup label="Swedish Cars">
+                        <option value="volvo">Volvo</option>
+                        <option value="saab">Saab</option>
+                    </optgroup>
+                    <optgroup label="German Cars">
+                        <option value="mercedes">Mercedes</option>
+                        <option value="audi">Audi</option>
+                    </optgroup>
+                </select><br />
+
+                <label for="carsm">Select multiple:</label>
+                <select id="carsm" name="cars" size="4" multiple>
+                    <option value="volvo">Volvo</option>
+                    <option value="saab">Saab</option>
+                    <option value="fiat">Fiat</option>
+                    <option value="audi">Audi</option>
+                </select><br />
+
+                <label>Text area:</label>
+                <textarea name="message" rows="10" cols="30">
+    The cat was playing in the garden.
+    </textarea><br />
+
+                <label>Button</label><button type="button" onclick="alert('Hello World!')">Click Me!</button>
+
+            </fieldset>
+        </form>
+
+        <hr />
+
+        <p>The meter element is used to display a gauge: tiene min low high max y value</p>
+
+        <label for="disk_c">Medida 1:</label>
+        <meter id="disk_c" value="13" optimum="50" min="0" low="25" high="75" max="100"></meter><br>
+
+        <label for="disk_c">Medida 2:</label>
+        <meter id="disk_c" value="55" optimum="50" min="0" low="25" high="75" max="100"></meter><br>
+
+
+        <label for="disk_c">Medida 3 high:</label>
+        <meter id="disk_c" value="90" optimum="50" min="0" low="25" high="75" max="100"></meter><br>
+
+
+        <label for="disk_c">Medida 1:</label>
+        <meter id="disk_c" value="13" min="0" low="25" high="75" max="100"></meter><br>
+
+
+        <label for="disk_d">Disk usage D:</label>
+        <meter id="disk_d" style="color: red;" value="0.6">60%</meter>
+
+        <hr />
+
+        <h2>Progress bar</h2>
+        <p>Loading <progress value="35" max="100"></progress></p>
+
+        <hr />
+
+        <h1>The aside element - Styled with CSS</h1>
+
+        <p>My family and I visited The Epcot center this summer. The weather was nice, and Epcot was amazing! I had a
+            great
+            summer together with my family!</p>
+
+        <aside>
+            <p>The Epcot center is a theme park at Walt Disney World Resort featuring exciting attractions,
+                international
+                pavilions, award-winning fireworks and seasonal special events.</p>
+        </aside>
+
+        <p>My family and I visited The Epcot center this summer. The weather was nice, and Epcot was amazing! I had a
+            great
+            summer together with my family!</p>
+        <p>My family and I visited The Epcot center this summer. The weather was nice, and Epcot was amazing! I had a
+            great
+            summer together with my family!</p>
+
+        <hr/>
+        <h2>Dialog</h2>
+
+        <div>
+            <dialog id="DialogExample">
+              <p>
+                Here is some text for example.
+              </p>
+              <button id="hideDlgBtn">Close dialog</button>
+            </dialog>
+            <button id="showDlgBtn">Show dialog</button>
+          </div>
+          <script type="text/JavaScript">
+            (
+                function() { 
+                    var dialog = document.getElementById('DialogExample'); 
+                    document.getElementById('showDlgBtn').onclick = function() { dialog.show(); }; 
+                    document.getElementById('hideDlgBtn').onclick = function() { dialog.close(); }; 
+                }
+            )();
+          </script>
+          
+                
+        </main>
+
+    <footer>
+        <p>Footer Company © W3docs. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
