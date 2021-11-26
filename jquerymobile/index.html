@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Jquery Mobile App</title>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+
+    <div data-role="page" data-theme="a" id="pageone">
+        <div data-role="header">
+            <h1>Page One</h1>
+        </div><!-- /header -->
+    
+        <div role="main" class="ui-content">
+            <p>Page content goes here. </p>
+
+            <!--
+                transitions: fadepop flip turn flow slidefade slide slideup slidedown none
+            -->
+            <a href="#pagetwo" data-role="button" data-inline="true" 
+            data-transition="slideup">go to page two slideup</a>
+            <a href="#pagetwo" data-role="button" data-inline="true" 
+            data-transition="turn">go to page two turn</a>
+            <a href="#pagetwo" data-role="button" data-inline="true" 
+            data-transition="flow">go to page two flow</a>
+            <a href="about.html" data-role="button" data-inline="true" data-ajax="false">About</a>
+        </div><!-- /content -->
+    
+        <div data-role="footer">
+            <h4>Page Footer</h4>
+        </div><!-- /footer -->
+    </div>
+
+    <div data-role="page" data-theme="a" id="pagetwo">
+        <div data-role="header">
+            <h1>Page Two</h1>
+        </div><!-- /header -->
+    
+        <div role="main" class="ui-content">
+            <p>Page content goes here. <a href="#pageone" data-role="button" data-transition="slidedown">go to page one</a></p>
+        </div><!-- /content -->
+    
+        <div data-role="footer">
+            <h4>Page Footer</h4>
+        </div><!-- /footer -->
+    </div>
+</body>
+</html>
