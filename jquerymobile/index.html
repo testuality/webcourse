@@ -14,6 +14,8 @@
     <div data-role="page" data-theme="a" id="pageone">
         <div data-role="header">
             <h1>Page One</h1>
+            <a href="#pagetwo" data-transition="slide">Page two</a>
+            <a href="#pageone" data-transition="slide">Page one</a>
         </div><!-- /header -->
     
         <div role="main" class="ui-content">
@@ -28,17 +30,28 @@
             data-transition="turn">go to page two turn</a>
             <a href="#pagetwo" data-role="button" data-inline="true" 
             data-transition="flow">go to page two flow</a>
-            <a href="about.html" data-role="button" data-inline="true" data-ajax="false">About</a>
+            <a href="about.html" data-role="button" data-inline="true" data-icon="delete" data-ajax="false">About</a>
+            <a href="#popupwindow" data-role="button" data-inline="true" data-icon="plus" data-rel="dialog" >Popup window</a>
+        
+            
+            
+            
         </div><!-- /content -->
     
-        <div data-role="footer">
-            <h4>Page Footer</h4>
+        <div data-role="footer" class="ui-bar">
+            <div data-role="contolgroup" data-type="horizontal">
+                <a href="#pagetwo" class="ui-btn" data-icon="plus">Clicka</a>
+                <a href="#pagetwo" class="ui-btn" data-icon="plus">Clickb</a>
+                <a href="#pagetwo" class="ui-btn" data-icon="plus">Clickc</a>
+            </div>
         </div><!-- /footer -->
     </div>
 
     <div data-role="page" data-theme="a" id="pagetwo">
         <div data-role="header">
             <h1>Page Two</h1>
+            <a href="#pageone" data-transition="slide">Page one</a>
+            <a href="#pageone" data-transition="slide">Page one</a>
         </div><!-- /header -->
     
         <div role="main" class="ui-content">
@@ -48,6 +61,18 @@
         <div data-role="footer">
             <h4>Page Footer</h4>
         </div><!-- /footer -->
+    </div>
+
+
+    <div data-role="page" data-theme="a" id="popupwindow">
+        <div data-role="header">
+            <h1>Popup window</h1>
+        </div><!-- /header -->
+    
+        <div role="main" class="ui-content">
+            <a href="#pageone" data-role="button" data-rel="back">cerrar</a></p>
+        </div><!-- /content -->
+    
     </div>
 </body>
 </html>
