@@ -8,13 +8,90 @@
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+    <script lang="javascript" src="app.js"></script>
 </head>
 <body>
+
+    <div data-role="page" data-theme="a" id="pagemain">
+        <div data-role="header">
+            <h1>Main page</h1>
+            <a href="#pagemenu" data-transition="slide" class="ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all">Menu</a>
+        </div><!-- /header -->
+    
+        <div role="main" class="ui-content">
+            <p>Page content goes here. </p>
+        </div><!-- /content -->
+    
+        <div data-role="footer" class="ui-bar">
+            Footer
+        </div><!-- /footer -->
+    </div>
+
+    <div data-role="page" data-theme="a" id="pagemenu">
+        <div data-role="controlgroup" data-mini="true">
+            <a href="#pagenotifs" data-role="button"  
+            data-transition="flip">Notifications</a>
+            <a href="#pagestore" data-role="button" 
+            data-transition="flip">Storage</a>
+            <a href="#pagelocation" data-role="button" 
+            data-transition="flip">Geolocation</a>
+        </div>
+    </div>
+
+    <div data-role="page" data-theme="a" id="pagenotifs">
+        <div data-role="header">
+            <h1>Notifications</h1>
+            <a href="#pagemenu" data-transition="slide" class="ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all">Menu</a>
+        </div><!-- /header -->
+    
+        <div role="main" class="ui-content">
+            <p><button data-role="button" data-inline="true" 
+                onClick="sendNotification()">Send notification</button></p>
+        </div><!-- /content -->
+    
+        <div data-role="footer" class="ui-bar">
+            Footer
+        </div><!-- /footer -->
+    </div>
+
+    <div data-role="page" data-theme="a" id="pagestore">
+        <div data-role="header">
+            <h1>Storage</h1>
+            <a href="#pagemenu" data-transition="slide" class="ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all">Menu</a>
+        </div><!-- /header -->
+    
+        <div role="main" class="ui-content">
+            <p><button data-role="button" data-inline="true" 
+                onClick="storeData()">Store data</button></p>
+        </div><!-- /content -->
+    
+        <div data-role="footer" class="ui-bar">
+            Footer
+        </div><!-- /footer -->
+    </div>
+
+    <div data-role="page" data-theme="a" id="pagelocation">
+        <div data-role="header">
+            <h1>Geolocation</h1>
+            <a href="#pagemenu" data-transition="slide" class="ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all">Menu</a>
+        </div><!-- /header -->
+    
+        <div role="main" class="ui-content">
+            <p><button data-role="button" data-inline="true" 
+                onClick="getLocation()">Get location</button></p>
+            <p><span id="geoLocMsgBox"></span></p>
+        </div><!-- /content -->
+    
+        <div data-role="footer" class="ui-bar">
+            Footer
+        </div><!-- /footer -->
+    </div>
 
     <div data-role="page" data-theme="a" id="pageone">
         <div data-role="header">
             <h1>Page One</h1>
-            <a href="#pagetwo" data-transition="slide">Page two</a>
+            <a href="#pagetwo" data-transition="slide" data-icon="bars">Menu</a>
             <a href="#pageone" data-transition="slide">Page one</a>
         </div><!-- /header -->
     
